@@ -1,7 +1,7 @@
 Feature: Search phrase "Prowly Media Monitoring" on bing.com with filtering by content category
 
 Scenario: Basic Search
-Given the user is on the homepage of the Bing.com browser
+Given the user is on the homepage of the bing.com search engine
 When the user enters "Prowly Media Monitoring" in the search bar
 Then the search results should display relevant information without filtering
 
