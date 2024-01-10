@@ -1,0 +1,38 @@
+Feature: Search phrase "Prowly Media Monitoring" on bing.com with filtering by content category
+
+Scenario: Basic Search
+Given the user is on the homepage of the Bing.com browser
+When the user enters "Prowly Media Monitoring" in the search bar
+Then the search results should display relevant information without filtering
+
+Scenario: Filter by School
+Given the user has performed a basic search for "Prowly Media Monitoring" phrase
+When the user chooses to filter by "School"
+And the user is logged into a microsoft account associated with the school
+Then the search results should display available information related to the school for the phrase "Prowly Media Monitoring"
+
+Scenario: Filter by Images
+Given the user has performed a basic search for "Prowly Media Monitoring" phrase
+When the user chooses to filter by "Images"
+Then the search results should first display images related to articles associated with the phrase "Prowly Media Monitoring"
+
+Scenario: Filter by Videos
+Given the user has performed a basic search for "Prowly Media Monitoring" phrase
+When the user chooses to filter by "Videos"
+Then search results should display YouTube videos related to the phrase "Prowly Media Monitoring" first
+
+Scenario: Filter by Maps
+Given the user has performed a basic search for "Prowly Media Monitoring" phrase
+When the user chooses to filter by "Maps"
+Then the search results should display the points on the map where "Prowly Media Monitoring" is located
+And the search should not return any results
+
+Scenario: Filter by News
+Given the user has performed a basic search for "Prowly Media Monitoring" phrase
+When the user chooses to filter by "News"
+Then the search results should display news articles related to the phrase "Prowly Media Monitoring" first
+
+Scenario: Filter by Shopping
+Given the user has performed a basic search for "Prowly Media Monitoring" phrase
+When the user chooses to filter by "Shopping"
+Then the search results should display online auctions for items related to the phrase "Prowly Media Monitoring" first
