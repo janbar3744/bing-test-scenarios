@@ -1,0 +1,33 @@
+Feature: Using "copilot" in the bing.com search engine to gather information about Prowly's media monitoring module
+
+Scenario: Basic Search with Bing Copilot
+Given the user is on the homepage of the Bing.com search engine
+When the user enters "Prowly Media Monitoring" in the search bar
+And the user chooses to filter using "Copilot"
+Then Copilot should return found relevant information on Prowly Media Monitoring
+
+Scenario: Transition to information sources
+Given the user has performed a basic search using Copilot for "Prowly Media Monitoring" phrase
+And the user has accepted the terms of use
+When the user clicks on a piece of text with a link
+Then the user will be taken to the page from which the information was taken
+
+Scenario: Evaluating Copilot Responses
+Given the user has performed a basic search using Copilot for "Prowly Media Monitoring" phrase
+And the user has accepted the terms of use
+When Copilot provides responses
+Then the user should be able to rate the response through the thumbs-up system
+
+Scenario: Copying Copilot Responses
+Given the user has performed a basic search using Copilot for "Prowly Media Monitoring" phrase
+And the user has accepted the terms of use
+When Copilot provides responses
+And the user decides to copy a copilot response
+Then the user by clicking copy should be able to copy the entire copilot response
+
+Scenario: Using Copilot suggestions
+Given the user has performed a basic search using Copilot for "Prowly Media Monitoring" phrase
+And the user has accepted the terms of use
+When Copilot provides responses
+And the user wants to search further using Copilot's suggestions
+Then the user by clicking on the selected suggestion should receive another Copilot response
